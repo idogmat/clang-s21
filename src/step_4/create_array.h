@@ -1,0 +1,1 @@
+int create_array(int cols, int rows);
