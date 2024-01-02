@@ -65,7 +65,6 @@ long double s21_ceil(double x) {
     }
     return x < 0 ? -count + 1 : count;
 }
-
 // floor
 long double s21_floor(double x) {
     int count;
@@ -118,6 +117,7 @@ long double log_other(double x) {
     return rez;
 }
 
+
 // exp
 long double s21_exp(double x) {
     long double rez = 1, y = 1;
@@ -156,12 +156,12 @@ long double s21_sqrt(double x) {
 
 // pow
 long double s21_pow(double base, double exp) {
-    if (!exp) return 1;
+if (!exp) return 1;
     if (base == s21_NINF && exp == s21_NINF) return 0;
     if (base == s21_INF && exp == s21_INF) return s21_INF;
     long double rez;
-    rez = s21_exp(exp * s21_log(base));
-    return rez;
+rez = s21_exp(exp * s21_log(base));
+return rez;
 }
 
 // sin
